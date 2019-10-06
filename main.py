@@ -275,7 +275,7 @@ def removeFromCart():
 @app.route("/logout")
 def logout():
     session.pop('email', None)
-    return redirect(url_for('root'))
+    return redirecct(url_for('root'))
 
 def is_valid(email, password):
     con = sqlite3.connect('database.db')
